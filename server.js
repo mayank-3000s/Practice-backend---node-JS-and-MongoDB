@@ -7,6 +7,8 @@ const Item = require('./model/menu');
 const bodyparser = require('body-parser');
 app.use(bodyparser.json());
 
+require('dotenv').config();
+
 app.get('/',(req, res)=>{
     res.status(200).json({response : 'successfull'});
 })
@@ -14,6 +16,7 @@ app.get('/',(req, res)=>{
 const menuRouter = require('./router/menuRouter');
 app.use('/menu', menuRouter);
 
-app.listen(3000,()=>{
+const PORT = process.env.PORT || 3000 ;
+app.listen(PORT,()=>{
     console.log("server is on port 3000");
 })

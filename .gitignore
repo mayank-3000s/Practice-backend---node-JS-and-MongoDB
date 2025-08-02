@@ -1,3 +1,4 @@
 #file that should be ignore
 
-/node_modules
+node_modules/
+.env

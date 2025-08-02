@@ -1,8 +1,9 @@
 // we will import mongoose in db file
 const mongoose = require('mongoose');
 
+require('dotenv').config();
 // set up URL which we found in cmd (->mongosh)
-const mongoURL = 'mongodb://127.0.0.1:27017/menu';
+const mongoURL = process.env.MONGO_URL;
 
 // connect the url and mongoose database
 mongoose.connect(mongoURL);
