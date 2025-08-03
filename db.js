@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 // set up URL which we found in cmd (->mongosh)
-//const mongoURL = process.env.MONGO_URL;
-const mongoURL = process.env.MONGO_URL_LIVE;
+const mongoURL = process.env.MONGO_URL;
+//const mongoURL = process.env.MONGO_URL_LIVE;
 
 // connect the url and mongoose database
 mongoose.connect(mongoURL);
